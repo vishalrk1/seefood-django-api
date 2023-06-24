@@ -1,1 +1,1 @@
-web: gunicorn backend.wsgi --log-file -
+web: sh ./startup.sh && gunicorn backend.wsgi --log-file -
