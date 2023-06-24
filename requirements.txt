@@ -6,3 +6,4 @@ torch
 torchvision
 djangorestframework
 django
+django-cors-headers
