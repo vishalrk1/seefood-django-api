@@ -46,7 +46,7 @@ class seeFoodModel(nn.Module):
     
 def create_torch_model(model_weight_path):
     model = seeFoodModel(classes=101)
-    model.load_state_dict(torch.load(model_weight_path))
+    model.load_state_dict(torch.load(model_weight_path, map_location=torch.device('cpu')))
     
     normalize = transforms.Normalize(
         [0.485, 0.456, 0.406], 
